@@ -3,4 +3,5 @@ export * from "./details/Details";
 export * from "./explore/Explore";
 export * from "./home/Home";
 export * from "./home/heroBanner/HeroBanner";
+export * from "./home/trending/Trending";
 export * from "./searchResult/SearchResult";
