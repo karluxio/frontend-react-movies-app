@@ -5,5 +5,7 @@ export * from "./footer/Footer";
 export * from "./genres/Genres";
 export * from "./header/Header";
 export * from "./lazyLoadImage/Img";
+export * from "./movieCard/MovieCard";
+export * from "./spinner/Spinner";
 export * from "./switchTabs/SwitchTabs";
 export * from "./videoPopup/VideoPopup";
