@@ -75,8 +75,12 @@ export const DetailsBanner = ({ video, crew }) => {
                       <div
                         className="playbtn"
                         onClick={() => {
-                          setShow(true);
-                          setVideoId(video.key);
+                          if (video) {
+                            setVideoId(video?.key);
+                            setShow(true);
+                          } else {
+                            alert("Video is not available");
+                          }
                         }}
                       >
                         <PlayIcon />
