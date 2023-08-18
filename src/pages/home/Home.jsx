@@ -1,4 +1,4 @@
-import { HeroBanner, Trending, Popular } from "../";
+import { HeroBanner, Trending, Popular, TopRated } from "../";
 import "./style.scss";
 
 export const Home = () => {
@@ -7,6 +7,7 @@ export const Home = () => {
       <HeroBanner />
       <Trending />
       <Popular />
+      <TopRated />
     </div>
   );
 };
