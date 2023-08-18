@@ -4,5 +4,5 @@ export * from "./contentWrapper/ContentWrapper";
 export * from "./footer/Footer";
 export * from "./genres/Genres";
 export * from "./header/Header";
-export * from "./lazyLoadImage/img";
+export * from "./lazyLoadImage/Img";
 export * from "./switchTabs/SwitchTabs";
