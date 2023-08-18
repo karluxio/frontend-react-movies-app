@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks";
-import { DetailsBanner } from "../";
+import { DetailsBanner, VideosSection } from "../";
 import "./style.scss";
 import { Cast } from "./cast/Cast";
 
@@ -15,7 +15,7 @@ export const Details = () => {
     <div>
       <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
       <Cast data={credits?.cast} loading={creditsLoading} />
-      {/* <VideosSection data={data} loading={loading} /> */}
+      <VideosSection data={data} loading={loading} />
       {/* <Similar mediaType={mediaType} id={id} /> */}
       {/* <Recommendation mediaType={mediaType} id={id} /> */}
     </div>
