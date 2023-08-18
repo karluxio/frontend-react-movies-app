@@ -1,8 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks";
-import { DetailsBanner, VideosSection } from "../";
+import {
+  DetailsBanner,
+  VideosSection,
+  Cast,
+  Similar,
+  Recommendation,
+} from "../";
 import "./style.scss";
-import { Cast } from "./cast/Cast";
 
 export const Details = () => {
   const { mediaType, id } = useParams();
@@ -16,8 +21,8 @@ export const Details = () => {
       <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
       <Cast data={credits?.cast} loading={creditsLoading} />
       <VideosSection data={data} loading={loading} />
-      {/* <Similar mediaType={mediaType} id={id} /> */}
-      {/* <Recommendation mediaType={mediaType} id={id} /> */}
+      <Similar mediaType={mediaType} id={id} />
+      <Recommendation mediaType={mediaType} id={id} />
     </div>
   );
 };
