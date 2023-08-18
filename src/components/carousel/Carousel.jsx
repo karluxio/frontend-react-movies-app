@@ -1,16 +1,17 @@
+import dayjs from "dayjs";
 import { useRef } from "react";
 import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import dayjs from "dayjs";
+import { useNavigate } from "react-router-dom";
 
-import { ContentWrapper } from "../contentWrapper/ContentWrapper";
 import { Img } from "../";
 import PosterFallback from "../../assets/no-poster.png";
+import { ContentWrapper } from "../contentWrapper/ContentWrapper";
 
+import { CircleRating } from "../";
 import "./style.scss";
 
 export const Carousel = ({ data, loading }) => {
@@ -55,6 +56,7 @@ export const Carousel = ({ data, loading }) => {
                 <div className="carouselItem" key={item.id}>
                   <div className="posterBlock">
                     <Img src={posterUrl} />
+                    <CircleRating rating={item.vote_average.toFixed(1)} />
                   </div>
                   <div className="textBlock">
                     <span className="title">{item.title || item.name}</span>
